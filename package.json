@@ -2,7 +2,7 @@
   "name": "@kgan/create-kgan-react-router-app",
   "author": "KGAN",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A React Router Starter from scratch using TypeScript, Webpack, Jest, React Testing Library, Storybook, Prettier, ESLint, and GitHub Actions.",
   "type": "module",
   "bin": "./bin/cli.js",
