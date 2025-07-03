@@ -5,7 +5,6 @@ import { createInterface } from "node:readline";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
-// Sample usage: clone template and install deps
 const repo = "https://github.com/kganallinone/kgan.react.router.template.git";
 
 const rl = createInterface({
@@ -27,11 +26,21 @@ rl.question("Enter your project name: ", (projectName) => {
   console.log(`🚀 Creating project ${projectName}...`);
 
   try {
+    // Clone the template repo
     execSync(`git clone ${repo} ${projectName}`, { stdio: "inherit" });
-    execSync(`cd ${projectName} && npm install`, {
+
+    // Define the full path to the project
+    const projectPath = join(process.cwd(), projectName);
+
+    // Log where npm install will run
+    console.log(`📦 Installing dependencies in ${projectPath}...`);
+
+    // Install dependencies inside the cloned directory
+    execSync("npm install", {
+      cwd: projectPath,
       stdio: "inherit",
-      shell: true,
     });
+
     console.log("✅ Project setup complete!");
   } catch (err) {
     console.error("❌ Failed to set up project:", err);
