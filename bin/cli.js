@@ -6,7 +6,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 // Sample usage: clone template and install deps
-const repo = "https://github.com/YOUR-USERNAME/YOUR-TEMPLATE-REPO.git";
+const repo = "https://github.com/kganallinone/kgan.react.router.template.git";
 
 const rl = createInterface({
   input: process.stdin,

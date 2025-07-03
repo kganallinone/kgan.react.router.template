@@ -1,9 +1,16 @@
 {
-  "name": "ftcc.health.app",
-  "version": "0.0.0-development",
+  "name": "@kgan/create-kgan-react-router-app",
+  "author": "KGAN",
+  "license": "MIT",
+  "version": "0.0.0",
   "description": "A React Router Starter from scratch using TypeScript, Webpack, Jest, React Testing Library, Storybook, Prettier, ESLint, and GitHub Actions.",
   "type": "module",
   "bin": "./bin/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kganallinone/kgan.react.router.template"
+  },
+  "keywords": [],
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
@@ -50,5 +57,10 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
